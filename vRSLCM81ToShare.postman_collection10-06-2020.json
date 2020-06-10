@@ -111,7 +111,7 @@
 					"response": []
 				},
 				{
-					"name": "Get exisitng licenses in vRSLCM",
+					"name": "Get existing licenses in vRSLCM",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -149,7 +149,7 @@
 					"response": []
 				},
 				{
-					"name": "get all requests  in vRSLCM",
+					"name": "Get all requests  in vRSLCM",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -306,7 +306,7 @@
 					"response": []
 				},
 				{
-					"name": "delete environment in vRSLCM",
+					"name": "Delete environment in vRSLCM",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -361,7 +361,7 @@
 			"name": "vROps",
 			"item": [
 				{
-					"name": "Create vrops-api wildcard certificate in vRSLCM",
+					"name": "Create vrops wildcard certificate in vRSLCM",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -506,7 +506,7 @@
 			"name": "vRNI",
 			"item": [
 				{
-					"name": "Create vrni-api wildcard certificate in vRSLCM",
+					"name": "Create vrni wildcard certificate in vRSLCM",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -554,7 +554,7 @@
 					"response": []
 				},
 				{
-					"name": "Deploy a medium sized vRNI environment in vRSLCM Copy",
+					"name": "Deploy a medium sized vRNI environment in vRSLCM",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -742,7 +742,7 @@
 			"name": "vRLI",
 			"item": [
 				{
-					"name": "Create vrli-test wildcard certificate in vRSLCM",
+					"name": "Create vrli wildcard certificate in vRSLCM",
 					"request": {
 						"method": "PUT",
 						"header": [
