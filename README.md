@@ -27,11 +27,11 @@ GENERAL
     
 vROPS
 
-  Create vrops wildcard certificate in vRSLCM
-  
-  Deploy a single node vROps server
-  
-  Deploy a 2 node  vROps cluster and VIP
+     Create vrops wildcard certificate in vRSLCM
+
+     Deploy a single node vROps server
+
+     Deploy a 2 node  vROps cluster and VIP
   
 vRNI
 
