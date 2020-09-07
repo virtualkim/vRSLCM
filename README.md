@@ -23,6 +23,7 @@ vROPS
      Create vrops wildcard certificate in vRSLCM
      Deploy a single node vROps server
      Deploy a 2 node  vROps cluster and VIP
+     Deploy a 2 node  vROps cluster, Remote Collector and VIP (**NEW**)
   
 vRNI
 
