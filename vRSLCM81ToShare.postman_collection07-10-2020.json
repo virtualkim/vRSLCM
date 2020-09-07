@@ -1,0 +1,904 @@
+{
+	"info": {
+		"_postman_id": "cc18d661-e5ed-4d31-9488-e034c215cc63",
+		"name": "vRSLCM81 - To Share",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "General",
+			"item": [
+				{
+					"name": "Get user passwords in the locker of vRSLCM",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/locker/api/passwords",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"locker",
+								"api",
+								"passwords"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/locker/api/passwords\n\nGet the password assigned to a user in vRSLCM.\nYou will need the \"vmid\" of the user password you want to use, to create a new environment"
+					},
+					"response": []
+				},
+				{
+					"name": "Get existing certificates in vRSLCM",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/locker/api/certificates",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"locker",
+								"api",
+								"certificates"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/locker/api/certificates\n\nYou will need the \"name of the certificate\" and the \"vmid\" of the certificate you want to use to create a new environment"
+					},
+					"response": []
+				},
+				{
+					"name": "Get existing licenses in vRSLCM",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/locker/api/active/licenses",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"locker",
+								"api",
+								"active",
+								"licenses"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/locker/api/active/licenses\n\nYou will need the \"name of the license\" and the \"vmid\" of the \"license\" you want to use to create a new environment\nAuthorization is basic authentication\nusername: admin@local\npassword: your vRSLCM password"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all requests  in vRSLCM",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/request/api/requests",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"request",
+								"api",
+								"requests"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/request/api/requests\n\nget all existing requests"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a request in vRSLCM",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/request/api/requests/{{vmid of RequestYouWantToDelete}}",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"request",
+								"api",
+								"requests",
+								"{{vmid of RequestYouWantToDelete}}"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/request/api/requests/{{vmid of RequestYouWantToDelete}}\nLook up the vmid of the request you want to delete from vRSLCM, first.\nAuthorization: Basic Authentication\nusername: admin@local\npassword: your vRSLCM password"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all environments in vRSLCM",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"lcops",
+								"api",
+								"environments"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments\n\nlook up all existing environments\nAuthorization is basic authentication\nusername: admin@local\npassword: your vRSLCM password"
+					},
+					"response": []
+				},
+				{
+					"name": "View VMs from the environment in vRSLCM you want to delete in vRSLCM",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/{{TheNameOFYourEnvironment}}",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"lcops",
+								"api",
+								"environments",
+								"{{TheNameOFYourEnvironment}}"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/{{TheNameOFYourEnvironment}}I/delete\nLook up all the VMs which make out the environment you want to delete\nAuthorization is basic authentication\nusername: admin@local\npassword: your vRSLCM password"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete environment in vRSLCM",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"deleteFromVcenter\": true\r\n}"
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/{{TheNameOFYourEnvironment}}/delete",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"lcops",
+								"api",
+								"environments",
+								"{{TheNameOFYourEnvironment}}",
+								"delete"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/{{TheNameOFYourEnvironment}}/delete\n\ncontent type = json application (to delete the VMs from vCenter)\nAuthorization is basic authentication\nusername: admin@local\npassword: your vRSLCM password"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "vROps",
+			"item": [
+				{
+					"name": "Create vrops wildcard certificate in vRSLCM",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"c\": \"{{CountryCode}}\",\r\n  \"cN\": \"{{*.domain}}\",\r\n  \"host\": [\r\n    \"{{*.domain}}\"\r\n  ],\r\n  \"ip\": [\r\n    \"x.x.x.x\", \"x.x.x.x\"\r\n  ],\r\n  \"l\": \"{{City}}\",\r\n  \"o\": \"{{YourOrg}}\",\r\n  \"oU\": \"{{YourOU}}\",\r\n  \"sT\": \"{{YourState}}\",\r\n  \"size\": 2048,\r\n  \"transactionId\": \"{{YourValue}}\",\r\n  \"validity\": {{numberInDays}},\r\n  \"vmid\": \"{{YourValue}}\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/locker/api/certificates/{{yourvalue}}",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"locker",
+								"api",
+								"certificates",
+								"{{yourvalue}}"
+							]
+						},
+						"description": "PUT https://{{your-vrslcm-fqdn}}/lcm/locker/api/certificates/{{yourvalue}}\n\nReplace{{yourvalue}} in the API call with what you want your certificate to be called. The same goes for the next 2 values. \nAuthorization is basic authentication\n    username: admin@local\n    password: your vRSLCM password\n    MODIFY the content of the body (JSON)\ntransactionid = {{yourvalue}} (enter something up that will go here)\nvmid = {{yourvalue}} (enter something up that will go here)\nvalidity = {{number of days}}\nip = can be blank\nhost = can be a wildcard entry such as {{*.domain}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Deploy a single node vROps server in vRSLCM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"environmentId\":\"{{YourValue}}\",\r\n      \"environmentName\":\"{{YourValue}}\",\r\n      \"infrastructure\":{\r\n         \"properties\":{\r\n            \"dataCenterName\":\"DC\",\r\n            \"regionName\":\"default\",\r\n            \"zoneName\":\"default\",\r\n            \"vCenterName\":\"{{YourvCenterFQDN}}\",\r\n            \"vCenterHost\":\"{{YourvCenterFQDN}}\",\r\n            \"vcUsername\":\"administrator@vsphere.local\",\r\n            \"vcPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfVCPasswordInLocker}}\",\r\n            \"acceptEULA\":\"true\",\r\n            \"enableTelemetry\":\"false\",\r\n            \"adminEmail\":\"{{YourEmail}}\",\r\n            \"defaultPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfDefaultPasswordInLocker}}\",\r\n            \"certificate\":\"{{locker:certificate:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:Certificate}}\",\r\n            \"cluster\":\"{{YourCluster as in DC#Clusterl}}\",\r\n            \"storage\":\"{{YourDatastorel}}\",\r\n            \"diskMode\":\"thin\",\r\n            \"folderName\":\"{{YourFolder as found by using PowerCLI such as folder-group-v4 }}\",\r\n            \"resourcePool\":\"{{YourResourcePool as found by using PowerCLI such as ResourcePool-resgroup-32 }}\",\r\n            \"network\":\"{{YourNetwork }}\",\r\n            \"masterVidmEnabled\":\"true\",\r\n            \"dns\":\"x.x.x.x\",\r\n            \"domain\":\"{{YourDomain}}\",\r\n            \"gateway\":\"x.x.x.x\",\r\n            \"netmask\":\"255.255.255.0\",\r\n            \"searchpath\":\"{{YourDomain}}\",\r\n            \"timeSyncMode\":\"ntp\",\r\n            \"ntp\":\"x.x.x.x\",\r\n            \"isDhcp\":\"false\"\r\n         }\r\n      },\r\n      \"products\":[\r\n         {\r\n            \"id\":\"vrops\",\r\n            \"version\":\"8.1.0\",\r\n            \"properties\":{\r\n               \"certificate\":\"{{locker:certificate:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:YourvROPsCertificateName}}\",\r\n               \"productPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfDefaultPasswordInLocker}}\",\r\n               \"licenseRef\":\"{{locker:license:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfvROpsLicenseInLocker}}\",\r\n               \"disableTls\":\"TLSv1\",\r\n               \"timeSyncMode\":\"ntp\",\r\n               \"ntp\":\"x.x.x.x\",\r\n               \"affinityRule\":false,\r\n               \"configureAffinitySeparateAll\":\"true\",\r\n               \"deployOption\":\"small\"\r\n            },\r\n            \"clusterVIP\":{\r\n               \"clusterVips\":[\r\n \r\n               ]\r\n            },\r\n            \"nodes\":[\r\n               {\r\n                  \"type\":\"master\",\r\n                  \"properties\":{\r\n                     \"vmName\":\"{{YourValue}}\",\r\n                     \"hostName\":\"{{YourvROps.domain}}\",\r\n                     \"ip\":\"x.x.x.x\"\r\n                  }\r\n               }\r\n            ]\r\n         }\r\n      ]\r\n   }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"lcops",
+								"api",
+								"environments",
+								"create"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create\n\nCreate a new vROps single node using an existing certificate.\nDatacentername = name of datacenter in vSphere UI\nLook for the resourcepool and foldername using powerCLI:\nget-resourcepool -name resourcepool | get-view\nget folder name -name folder | get-view\nMODIFY the BODY (JSON) \nvCenterPassWord: get the vmid of the Pssword for vCenter from the Locker (see General API Calls)\ndefaultPassWord: get the vmid of the default Password from the Locker (see General API Calls)\ncertificate: get the vmid of the certificate from the Locker (see General API Calls)"
+					},
+					"response": []
+				},
+				{
+					"name": "Deploy a 2 node  vROps cluster and VIP in vRSLCM",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"environmentId\":\"{{YourValue}}\",\r\n      \"environmentName\":\"{{YourValue}}\",\r\n      \"infrastructure\":{\r\n         \"properties\":{\r\n            \"dataCenterName\":\"DC\",\r\n            \"regionName\":\"default\",\r\n            \"zoneName\":\"default\",\r\n            \"vCenterName\":\"{{YourvCenterFQDN}}\",\r\n            \"vCenterHost\":\"{{YourvCenterFQDN}}\",\r\n            \"vcUsername\":\"administrator@vsphere.local\",\r\n            \"vcPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfVCPasswordInLocker}}\",\r\n            \"acceptEULA\":\"true\",\r\n            \"enableTelemetry\":\"false\",\r\n            \"adminEmail\":\"{{YourEmail}}\",\r\n            \"defaultPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfDefaultPasswordInLocker}}\",\r\n            \"certificate\":\"{{locker:certificate:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:YourvROPsCertificateName}}\",\r\n            \"cluster\":\"{{YourCluster as in DC#Clusterl}}\",\r\n            \"storage\":\"{{YourDatastorel}}\",\r\n            \"diskMode\":\"thin\",\r\n            \"folderName\":\"{{YourFolder as found by using PowerCLI such as folder-group-v4 }}\",\r\n            \"resourcePool\":\"{{YourResourcePool as found by using PowerCLI such as ResourcePool-resgroup-32 }}\",\r\n            \"network\":\"{{YourNetwork }}\",\r\n            \"masterVidmEnabled\":\"true\",\r\n            \"dns\":\"x.x.x.x\",\r\n            \"domain\":\"{{YourDomain}}\",\r\n            \"gateway\":\"x.x.x.x\",\r\n            \"netmask\":\"255.255.255.0\",\r\n            \"searchpath\":\"{{YourDomain}}\",\r\n            \"timeSyncMode\":\"ntp\",\r\n            \"ntp\":\"x.x.x.x\",\r\n            \"isDhcp\":\"false\"\r\n         }\r\n      },\r\n      \"products\":[\r\n         {\r\n            \"id\":\"vrops\",\r\n            \"version\":\"8.1.0\",\r\n            \"properties\":{\r\n               \"certificate\":\"{{locker:certificate:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:YourvROPsCertificateName}}\",\r\n               \"productPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfDefaultPasswordInLocker}}\",\r\n               \"licenseRef\":\"{{locker:license:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfvROpsLicenseInLocker}}\",\r\n               \"disableTls\":\"TLSv1\",\r\n               \"timeSyncMode\":\"ntp\",\r\n               \"ntp\":\"x.x.x.x\",\r\n               \"affinityRule\":false,\r\n               \"configureAffinitySeparateAll\":\"true\",\r\n               \"deployOption\":\"small\"\r\n            },\r\n            \"clusterVIP\":{\r\n               \"clusterVips\":[\r\n \r\n               ]\r\n            },\r\n            \"nodes\":[\r\n               {\r\n                  \"type\":\"master\",\r\n                  \"properties\":{\r\n                     \"vmName\":\"{{YourvROps}}\",\r\n                     \"hostName\":\"{{YourvROps.Domain}}\",\r\n                     \"ip\":\"x.x.x.x\"}\r\n                  },\r\n                                 {\r\n                  \"type\":\"replica\",\r\n                  \"properties\":{\r\n                     \"vmName\":\"vrops-api-replica\",\r\n                     \"hostName\":\"{{YourvROpsReplica.domain}}\",\r\n                     \"ip\":\"x.x.x.x\"\r\n                  }\r\n               }\r\n            ]\r\n         }\r\n      ]\r\n   }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"lcops",
+								"api",
+								"environments",
+								"create"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create\nAPI documentation: https://{{your-vrslcm-fqdn}}/api/swagger-ui.html\nCreate a 2 node vROps cluster and VIP. \nDatacentername = name of datacenter in vSphere UI\nPREREQUISTES:\n1. Datacentername = name of datacenter in vSphere UI\n2. Look for the resourcepool an foldername using powershell:\n    get-resourcepool -name resourcepool | get-view\n    get folder name -name folde | get-view\nMODIFY the BODY (JSON) \nvCenterPassWord: get the vmid of the Pssword for vCenter from the Locker (see General API Calls)\ndefaultPassWord: get the vmid of the default Password from the Locker (see General API Calls)\ncertificate: get the vmid of the certificate from the Locker (see General API Calls)"
+					},
+					"response": []
+				},
+				{
+					"name": "Deploy a 2 node  vROps cluster, Small RC and VIP in vRSLCM",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"environmentId\":\"{{YourValue}}\",\r\n      \"environmentName\":\"{{YourValue}}\",\r\n      \"infrastructure\":{\r\n         \"properties\":{\r\n            \"dataCenterName\":\"DC\",\r\n            \"regionName\":\"default\",\r\n            \"zoneName\":\"default\",\r\n            \"vCenterName\":\"{{YourvCenterFQDN}}\",\r\n            \"vCenterHost\":\"{{YourvCenterFQDN}}\",\r\n            \"vcUsername\":\"administrator@vsphere.local\",\r\n            \"vcPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfVCPasswordInLocker}}\",\r\n            \"acceptEULA\":\"true\",\r\n            \"enableTelemetry\":\"false\",\r\n            \"adminEmail\":\"{{YourEmail}}\",\r\n            \"defaultPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfDefaultPasswordInLocker}}\",\r\n            \"certificate\":\"{{locker:certificate:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:YourvROPsCertificateName}}\",\r\n            \"cluster\":\"{{YourCluster as in DC#Clusterl}}\",\r\n            \"storage\":\"{{YourDatastorel}}\",\r\n            \"diskMode\":\"thin\",\r\n            \"folderName\":\"{{YourFolder as found by using PowerCLI such as folder-group-v4 }}\",\r\n            \"resourcePool\":\"{{YourResourcePool as found by using PowerCLI such as ResourcePool-resgroup-32 }}\",\r\n            \"network\":\"{{YourNetwork }}\",\r\n            \"masterVidmEnabled\":\"true\",\r\n            \"dns\":\"x.x.x.x\",\r\n            \"domain\":\"{{YourDomain}}\",\r\n            \"gateway\":\"x.x.x.x\",\r\n            \"netmask\":\"255.255.255.0\",\r\n            \"searchpath\":\"{{YourDomain}}\",\r\n            \"timeSyncMode\":\"ntp\",\r\n            \"ntp\":\"x.x.x.x\",\r\n            \"isDhcp\":\"false\"\r\n         }\r\n      },\r\n      \"products\":[\r\n         {\r\n            \"id\":\"vrops\",\r\n            \"version\":\"8.1.0\",\r\n            \"properties\":{\r\n               \"certificate\":\"{{locker:certificate:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:YourvROPsCertificateName}}\",\r\n               \"productPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfDefaultPasswordInLocker}}\",\r\n               \"licenseRef\":\"{{locker:license:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfvROpsLicenseInLocker}}\",\r\n               \"disableTls\":\"TLSv1\",\r\n               \"timeSyncMode\":\"ntp\",\r\n               \"ntp\":\"x.x.x.x\",\r\n               \"affinityRule\":false,\r\n               \"configureAffinitySeparateAll\":\"true\",\r\n               \"deployOption\":\"small\"\r\n            },\r\n            \"clusterVIP\":{\r\n               \"clusterVips\":[\r\n \r\n               ]\r\n            },\r\n            \"nodes\":[\r\n               {\r\n                  \"type\":\"master\",\r\n                  \"properties\":{\r\n                     \"vmName\":\"{{YourvROpsMaster}}\",\r\n                     \"hostName\":\"{{YourvROps.Domain}}\",\r\n                     \"ip\":\"x.x.x.x\"}\r\n                  },\r\n                                 {\r\n                  \"type\":\"replica\",\r\n                  \"properties\":{\r\n                     \"vmName\":\"{{YourvROpsReplica}}\",\r\n                     \"hostName\":\"{{YourvROpsReplica.domain}}\",\r\n                     \"ip\":\"x.x.x.x\"\r\n                  },\r\n                                 {\r\n                \"type\": \"remotecollector\",\r\n                \"properties\": {\r\n                    \"vmName\": \"{{YourvROpsRemoteCollector}}\",\r\n                    \"hostName\": \"{{YourvROpsRemoteCollector.domain}}\",\r\n                    \"ip\": \"192.168.1.43\",\r\n                    \"deployOption\": \"smallrc\"\r\n                    }\r\n               }\r\n            ]\r\n         }\r\n      ]\r\n   }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"lcops",
+								"api",
+								"environments",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "vRNI",
+			"item": [
+				{
+					"name": "Create vrni wildcard certificate in vRSLCM",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "VMw@re1!",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"c\": \"{{CountryCode}}\",\r\n  \"cN\": \"{{*.domain}}\",\r\n  \"host\": [\r\n    \"{{*.domain}}\"\r\n  ],\r\n  \"ip\": [\r\n    \"x.x.x.x\", \"x.x.x.x\"\r\n  ],\r\n  \"l\": \"{{City}}\",\r\n  \"o\": \"{{YourOrg}}\",\r\n  \"oU\": \"{{YourOU}}\",\r\n  \"sT\": \"{{YourState}}\",\r\n  \"size\": 2048,\r\n  \"transactionId\": \"{{YourValue}}\",\r\n  \"validity\": {{numberInDays}},\r\n  \"vmid\": \"{{YourValue}}\"\r\n}\r\n\r\n"
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/locker/api/certificates/vrni52",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"locker",
+								"api",
+								"certificates",
+								"vrni52"
+							]
+						},
+						"description": "PUT https://{{your-vrslcm-fqdn}}/lcm/locker/api/certificates/{{yourvalue}}\n\nReplace{{yourvalue}} in the API call with what you want your certificate to be called. The same goes for the next 2 values. \nAuthorization is basic authentication\n    username: admin@local\n    password: your vRSLCM password\n    MODIFY the content of the body (JSON)\ntransactionid = {{yourvalue}} (enter something up that will go here)\nvmid = {{yourvalue}} (enter something up that will go here)\nvalidity = {{number of days}}\nip = can be blank\nhost = can be a wildcard entry such as {{*.domain}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Deploy a medium sized vRNI environment in vRSLCM",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "VMw@re1!",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"environmentId\": \"{{YourValue}}\",\n  \"environmentName\": \"{{YourValue}}\",\n  \"environmentHealth\": \"\",\n  \"logHistory\": \"\",\n  \"envStatus\": null,\n  \"infrastructure\": {\n    \"properties\": {\n      \"cluster\": \"{{YourCluster as in DC#Clusterl}}\",\n      \"dns\": \"x.x.x.x\",\n      \"certificate\": \"{{locker:certificate:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:vRNICertificate}}\",\n      \"diskMode\": \"thin\",\n      \"vCenterHost\": \"{{YourvCenterFQDN}}\",\n      \"dataCenterName\": \"Default_datacenter\",\n      \"storage\": \"{{YourDatastore}}\",\n      \"ntp\": \"x.x.x.x\",\n      \"vCenterName\": \"Default_vcenter\",\n      \"network\": \"{{YourNetwork}}\",\n      \"masterVidmEnabled\": \"true\",\n      \"netmask\": \"255.255.255.0\",\n      \"vcUsername\": \"administrator@vsphere.local\",\n      \"domain\": \"{{YourDomain}}\",\n      \"enableTelemetry\": \"false\",\n      \"folderName\": \"\",\n      \"acceptEULA\": \"true\",\n      \"vcPassword\": \"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfVCPasswordInLocker}}\",\n      \"gateway\": \"x.x.x.x\",\n      \"searchpath\": \"{{YourDomain}}\",\n      \"defaultPassword\": \"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfDefaultPasswordInLocker}}\",\n      \"resourcePool\": \"\",\n      \"adminEmail\": \"{{YourEmail}}\"\n    }\n  },\n  \"products\": [\n    {\n      \"id\": \"vrni\",\n      \"version\": \"5.2.0\",\n      \"patchHistory\": \"\",\n      \"snapshotHistory\": \"\",\n      \"logHistory\": \"\",\n      \"clusterVIP\": {\n        \"clusterVips\": []\n      },\n      \"nodes\": [\n        {\n          \"type\": \"vrni-platform\",\n          \"properties\": {\n            \"cluster\": \"{{YourCluster as in DC#Clusterl}}\",\n            \"vmName\": \"{{YourVMName}}\",\n            \"ip\": \"x.x.x.x\",\n            \"dns\": \"x.x.x.x\",\n            \"diskMode\": \"thin\",\n            \"vCenterHost\": \"{{YourvCenter}}\",\n            \"storage\": \"{{YourDatastore}}\",\n            \"network\": \"{{YourNetwork}}\",\n            \"contentLibraryItemId\": \"\",\n            \"netmask\": \"255.255.255.0\",\n            \"vcUsername\": \"administrator@vsphere.local\",\n            \"domain\": \"{{YourDomain}}\",\n            \"folderName\": \"\",\n            \"vcPassword\": \"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfVCPasswordInLocker}}\",\n            \"vrniNodeSize\": \"medium\",\n            \"gateway\": \"x.x.x.x\",\n            \"searchpath\": \"{{YourDomain}}\",\n            \"resourcePool\": \"\"\n          }\n        },\n        {\n          \"type\": \"vrni-collector\",\n          \"properties\": {\n            \"cluster\": \"{{YourCluster as in DC#Clusterl}}\",\n            \"vmName\": \"{{YourVMName}}\",\n            \"ip\": \"x.x.x.x\",\n            \"dns\": \"x.x.x.x\",\n            \"diskMode\": \"thin\",\n            \"vCenterHost\": \"{{YourvCenter}}\",\n            \"storage\": \"{{YourDatastore}}\",\n            \"network\": \"{{YourNetwork}}\",\n            \"contentLibraryItemId\": \"\",\n            \"netmask\": \"255.255.255.0\",\n            \"vcUsername\": \"administrator@vsphere.local\",\n            \"domain\": \"{{YourDomain}}\",\n            \"folderName\": \"\",\n            \"vcPassword\": \"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfVCPasswordInLocker}}\",\n            \"vrniNodeSize\": \"medium\",\n            \"gateway\": \"x.x.x.x\",\n            \"searchpath\": \"{{YourDomain}}\",\n            \"resourcePool\": \"\"\n          }\n        }\n      ],\n      \"properties\": {\n        \"certificate\": \"{{locker:certificate:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfvRNICertificateInLocker}}\",\n        \"contentLibraryItemId:platform\": \"\",\n        \"contentLibraryItemId:proxy\": \"\",\n        \"productPassword\": \"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfDefaultPasswordInLocker}}\",\n        \"licenseRef\": \"{{locker:license:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfvRNILicenseInLocker}}\",\n        \"ntp\": \"x.x.x.x\",\n        \"affinityRule\": \"false\",\n        \"configureAffinitySeparateAll\": \"true\",\n        \"masterVidmEnabled\": \"true\",\n        \"vrniPlatformUserName\": \"admin@local\",\n        \"vrniPlatformPassword\": \"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfInstallerPasswordInLocker}}\",\n        \"masterVidmHostName\": \"{{YourvIDM.domain}}\",\n        \"clientId\": \"{{YourvRNICLientID}}\",\n        \"clientSecret\": \"{{YourEnvironmentSecret}}\"\n              }\n              }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"lcops",
+								"api",
+								"environments",
+								"create"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create\nAPI documentation: https://vrslcm81.vmusketeers.local/api/swagger-ui.html\nCreate a new vRNI deployment. \nDatacentername = name of datacenter in vSphere UI\nPREREQUISTES:\n1. Datacentername = name of datacenter in vSphere UI\n2. Look for the resourcepool an foldername using powershell:\n    get-resourcepool -name resourcepool | get-view\n    get folder name -name folde | get-view\nMODIFY the BODY (JSON) \nvCenterPassWord: get the vmid of the Pssword for vCenter from the Locker (see General API Calls)\ndefaultPassWord: get the vmid of the default Password from the Locker (see General API Calls)\ncertificate: get the vmid of the certificate from the Locker (see General API Calls)"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "vRA",
+			"item": [
+				{
+					"name": "Create vra wildcard certificate in vRSLCM",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"c\": \"{{CountryCode}}\",\r\n  \"cN\": \"{{*.domain}}\",\r\n  \"host\": [\r\n    \"{{*.domain}}\"\r\n  ],\r\n  \"ip\": [\r\n    \"x.x.x.x\", \"x.x.x.x\"\r\n  ],\r\n  \"l\": \"{{City}}\",\r\n  \"o\": \"{{YourOrg}}\",\r\n  \"oU\": \"{{YourOU}}\",\r\n  \"sT\": \"{{YourState}}\",\r\n  \"size\": 2048,\r\n  \"transactionId\": \"{{YourValue}}\",\r\n  \"validity\": {{numberInDays}},\r\n  \"vmid\": \"{{YourValue}}\"\r\n}\r\n\r\n"
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/locker/api/certificates/vra81",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"locker",
+								"api",
+								"certificates",
+								"vra81"
+							]
+						},
+						"description": "PUT https://{{your-vrslcm-fqdn}}/lcm/locker/api/certificates/{{yourvalue}}\n\nReplace{{yourvalue}} in the API call with what you want your certificate to be called. The same goes for the next 2 values. \nAuthorization is basic authentication\n    username: admin@local\n    password: your vRSLCM password\n    MODIFY the content of the body (JSON)\ntransactionid = {{yourvalue}} (enter something up that will go here)\nvmid = {{yourvalue}} (enter something up that will go here)\nvalidity = {{number of days}}\nip = can be blank\nhost = can be a wildcard entry such as {{*.domain}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Deploy a single node vRA environment in vRSLCM",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"environmentId\": \"{{YourValue}}\",\n  \"environmentName\": \"{{YourValue}}\",\n  \"environmentHealth\": \"\",\n  \"logHistory\": \"\",\n  \"envStatus\": null,\n  \"infrastructure\": {\n    \"properties\": {\n      \"cluster\": \"{{YourCluster as in DC#Clusterl}}\",\n      \"dns\": \"x.x.x.x\",\n      \"certificate\":\"{{locker:certificate:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:vRNICertificate}}\",\n      \"diskMode\": \"thin\",\n      \"vCenterHost\": \"{{YourvCenterFQDN}}\",\n      \"dataCenterName\": \"Default_datacenter\",\n      \"storage\": \"{{YourDatastore}}\",\n      \"ntp\": \"x.x.x.x\",\n      \"vCenterName\": \"Default_vcenter\",\n      \"network\": \"{{YourNetwork}}\",\n      \"masterVidmEnabled\": \"true\",\n      \"netmask\": \"255.255.255.0\",\n      \"vcUsername\": \"administrator@vsphere.local\",\n      \"domain\": \"{{YourDomain}}\",\n      \"enableTelemetry\": \"false\",\n      \"folderName\": \"\",\n      \"acceptEULA\": \"true\",\n      \"vcPassword\": \"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfVCPasswordInLocker}}\",\n      \"gateway\": \"x.x.x.x\",\n      \"searchpath\": \"{{YourDomain}}\",\n      \"defaultPassword\": \"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfDefaultPasswordInLocker}}\",\n      \"resourcePool\": \"\",\n      \"adminEmail\": \"{{YourEmail}}\"\n    }\n  },\n  \"products\": [\n    {\n      \"id\": \"vra\",\n      \"version\": \"8.1.0\",\n      \"patchHistory\": \"\",\n      \"snapshotHistory\": \"\",\n      \"logHistory\": \"\",\n      \"clusterVIP\": {\n        \"clusterVips\": []\n      },\n      \"nodes\": [\n        {\n          \"type\": \"vrava-primary\",\n          \"properties\": {\n            \"hostName\": \"{{YourvRAServer.Domain}}\",\n            \"cluster\": \"{{YourCluster}}\",\n            \"vmName\": \"{{YourvRAServerName}}\",\n            \"ip\": \"x.x.x.x\",\n            \"dns\": \"x.x.x.x\",\n            \"diskMode\": \"thin\",\n            \"vCenterHost\": \"{{YourvCenterFQDN}}\",\n            \"storage\": \"{{YourDatastore}}\",\n            \"network\": \"{{YourNetwork}}\",\n            \"contentLibraryItemId\": \"\",\n            \"netmask\": \"255.255.255.0\",\n            \"vcUsername\": \"administrator@vsphere.local\",\n            \"domain\": \"{{YourDomain}}\",\n            \"folderName\": \"\",\n            \"vcPassword\": \"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfVCPasswordInLocker}}\",\n            \"gateway\": \"x.x.x.x\",\n            \"searchpath\": \"{{YourDomain}}\",\n            \"rootPassword\": \"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfInstallerPasswordInLocker}}\",\n            \"resourcePool\": \"\"\n          }\n        }\n      ],\n      \"properties\": {\n        \"license-1\": \"{{YourLicense}}\",\n        \"license\": \"{{YourLicense}}\",\n        \"__vraTenantList\": \"[]\",\n              }\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"lcops",
+								"api",
+								"environments",
+								"create"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create\nAPI documentation: https://{{your-vrslcm-fqdn}}/api/swagger-ui.html\nCreate a new single node vRA deployment. \nDatacentername = name of datacenter in vSphere UI\nPREREQUISTES:\n1. Datacentername = name of datacenter in vSphere UI\n2. Look for the resourcepool an foldername using powershell:\n    get-resourcepool -name resourcepool | get-view\n    get folder name -name folde | get-view\nMODIFY the BODY (JSON) \nvCenterPassWord: get the vmid of the Pssword for vCenter from the Locker (see General API Calls)\ndefaultPassWord: get the vmid of the default Password from the Locker (see General API Calls)\ncertificate: get the vmid of the certificate from the Locker (see General API Calls)"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d9245944-bd7d-4bf4-ace1-94eaf8f0985c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "2a38d4b2-cf4e-499f-a2c0-fb593097fae6",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "vRLI",
+			"item": [
+				{
+					"name": "Create vrli wildcard certificate in vRSLCM",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"c\": \"{{CountryCode}}\",\r\n  \"cN\": \"{{*.domain}}\",\r\n  \"host\": [\r\n    \"{{*.domain}}\"\r\n  ],\r\n  \"ip\": [\r\n    \"x.x.x.x\", \"x.x.x.x\"\r\n  ],\r\n  \"l\": \"{{City}}\",\r\n  \"o\": \"{{YourOrg}}\",\r\n  \"oU\": \"{{YourOU}}\",\r\n  \"sT\": \"{{YourState}}\",\r\n  \"size\": 2048,\r\n  \"transactionId\": \"{{YourValue}}\",\r\n  \"validity\": {{numberInDays}},\r\n  \"vmid\": \"{{YourValue}}\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/locker/api/certificates/{{yourvalue}}",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"locker",
+								"api",
+								"certificates",
+								"{{yourvalue}}"
+							]
+						},
+						"description": "PUT https://{{your-vrslcm-fqdn}}/lcm/locker/api/certificates/{{yourvalue}}\n\nReplace{{yourvalue}} in the API call with what you want your certificate to be called. The same goes for the next 2 values. \nAuthorization is basic authentication\n    username: admin@local\n    password: your vRSLCM password\n    MODIFY the content of the body (JSON)\ntransactionid = {{yourvalue}} (enter something up that will go here)\nvmid = {{yourvalue}} (enter something up that will go here)\nvalidity = {{number of days}}\nip = can be blank\nhost = can be a wildcard entry such as {{*.domain}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Deploy a single node vRLI server in vRSLCM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"environmentId\":\"{{YourValue}}\",\r\n      \"environmentName\":\"{{YourValue}}\",\r\n      \"infrastructure\":{\r\n         \"properties\":{\r\n            \"dataCenterName\":\"DC\",\r\n            \"regionName\":\"default\",\r\n            \"zoneName\":\"default\",\r\n            \"vCenterName\":\"{{YourvCenterFQDN}}\",\r\n            \"vCenterHost\":\"{{YourvCenterFQDN}}\",\r\n            \"vcUsername\":\"administrator@vsphere.local\",\r\n            \"vcPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfVCPasswordInLocker}}\",\r\n            \"acceptEULA\":\"true\",\r\n            \"enableTelemetry\":\"false\",\r\n            \"adminEmail\":\"{{YourEmail}}\",\r\n            \"defaultPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfDefaultPasswordInLocker}}\",\r\n            \"certificate\":\"{{locker:certificate:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:Certificate}}\",\r\n            \"cluster\":\"{{YourCluster as in DC#Clusterl}}\",\r\n            \"storage\":\"{{YourDatastorel}}\",\r\n            \"diskMode\":\"thin\",\r\n            \"folderName\":\"{{YourFolder as found by using PowerCLI such as folder-group-v4 }}\",\r\n            \"resourcePool\":\"{{YourResourcePool as found by using PowerCLI such as ResourcePool-resgroup-32 }}\",\r\n            \"network\":\"{{YourNetwork }}\",\r\n            \"masterVidmEnabled\":\"true\",\r\n            \"dns\":\"x.x.x.x\",\r\n            \"domain\":\"{{YourDomain}}\",\r\n            \"gateway\":\"x.x.x.x\",\r\n            \"netmask\":\"255.255.255.0\",\r\n            \"searchpath\":\"{{YourDomain}}\",\r\n            \"timeSyncMode\":\"ntp\",\r\n            \"ntp\":\"x.x.x.x\",\r\n            \"isDhcp\":\"false\"\r\n         }\r\n      },\r\n      \"products\":[\r\n         {\r\n            \"id\":\"vrli\",\r\n            \"version\":\"8.1.0\",\r\n\t\t\t\"patchHistory\": null,\r\n            \"snapshotHistory\": null,\r\n            \"logHistory\": null,\r\n            \"properties\":{\r\n               \"certificate\":\"{{locker:certificate:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:vRLICertificate}}\",\r\n               \"productPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfDefaultPasswordInLocker}}\",\r\n               \"licenseRef\":\"{{locker:license:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfvRLILicenseInLocker}}\",\r\n               \"timeSyncMode\":\"ntp\",\r\n               \"ntp\":\"x.x.x.x\",\r\n               \"affinityRule\":false,\r\n               \"configureAffinitySeparateAll\":\"true\",\r\n               \"deployOption\":\"small\"\r\n            },\r\n            \"clusterVIP\":{\r\n               \"clusterVips\":[\r\n \r\n               ]\r\n            },\r\n            \"nodes\":[\r\n               {\r\n                  \"type\":\"vrli-master\",\r\n                  \"properties\":{\r\n                     \"vmName\":\"{{YourVMName}}\",\r\n                     \"hostName\":\"{{YourVMName.Domain}}\",\r\n                     \"ip\":\"x.x.x.x\"\r\n                  }\r\n               }\r\n            ]\r\n         }\r\n      ]\r\n   }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"lcops",
+								"api",
+								"environments",
+								"create"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create\nAPI documentation: https://{{your-vrslcm-fqdn}}/api/swagger-ui.html\nCreate a new single node vRLI deployment. \nDatacentername = name of datacenter in vSphere UI\nPREREQUISTES:\n1. Datacentername = name of datacenter in vSphere UI\n2. Look for the resourcepool an foldername using powershell:\n    get-resourcepool -name resourcepool | get-view\n    get folder name -name folde | get-view\nMODIFY the BODY (JSON) \nvCenterPassWord: get the vmid of the Pssword for vCenter from the Locker (see General API Calls)\ndefaultPassWord: get the vmid of the default Password from the Locker (see General API Calls)\ncertificate: get the vmid of the certificate from the Locker (see General API Calls)"
+					},
+					"response": []
+				},
+				{
+					"name": "Deploy  a 3 node vRLI cluster in vRSLCM",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "admin@local",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "VMw@re1!",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"environmentId\":\"{{YourValue}}\",\r\n      \"environmentName\":\"{{YourValue}}\",\r\n      \"infrastructure\":{\r\n         \"properties\":{\r\n            \"dataCenterName\":\"DC\",\r\n            \"regionName\":\"default\",\r\n            \"zoneName\":\"default\",\r\n            \"vCenterName\":\"{{YourvCenterFQDN}}\",\r\n            \"vCenterHost\":\"{{YourvCenterFQDN}}\",\r\n            \"vcUsername\":\"administrator@vsphere.local\",\r\n            \"vcPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfVCPasswordInLocker}}\",\r\n            \"acceptEULA\":\"true\",\r\n            \"enableTelemetry\":\"false\",\r\n            \"adminEmail\":\"{{YourEmail}}\",\r\n            \"defaultPassword\":\"{{locker:password:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:NameOfDefaultPasswordInLocker}}\",\r\n            \"certificate\":\"{{locker:certificate:xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:Certificate}}\",\r\n            \"cluster\":\"{{YourCluster as in DC#Clusterl}}\",\r\n            \"storage\":\"{{YourDatastorel}}\",\r\n            \"diskMode\":\"thin\",\r\n            \"folderName\":\"{{YourFolder as found by using PowerCLI such as folder-group-v4 }}\",\r\n            \"resourcePool\":\"{{YourResourcePool as found by using PowerCLI such as ResourcePool-resgroup-32 }}\",\r\n            \"network\":\"{{YourNetwork }}\",\r\n            \"masterVidmEnabled\":\"true\",\r\n            \"dns\":\"x.x.x.x\",\r\n            \"domain\":\"{{YourDomain}}\",\r\n            \"gateway\":\"x.x.x.x\",\r\n            \"netmask\":\"255.255.255.0\",\r\n            \"searchpath\":\"{{YourDomain}}\",\r\n            \"timeSyncMode\":\"ntp\",\r\n            \"ntp\":\"x.x.x.x\",\r\n            \"isDhcp\":\"false\"\r\n         }\r\n      },\r\n      \"products\":[\r\n         {\r\n            \"id\":\"vrli\",\r\n            \"version\":\"8.1.0\",\r\n\t\t\t\"patchHistory\": null,\r\n            \"snapshotHistory\": null,\r\n            \"logHistory\": null,\r\n            \"properties\":{\r\n               \"certificate\":\"locker:certificate:c64f5bb1-ed47-446d-94f2-46ba5824467e:vrli-test\",\r\n               \"productPassword\":\"locker:password:67f9b5b8-0c61-4b2c-804c-810fd8e66e50:Default-Password\",\r\n               \"licenseRef\":\"locker:license:a96c9848-eceb-4890-aac5-8d71567f4301:2020 - vRealize Log Insight 4\",\r\n               \"timeSyncMode\":\"ntp\",\r\n               \"ntp\":\"192.168.1.10\",\r\n               \"affinityRule\":false,\r\n               \"configureAffinitySeparateAll\":\"true\",\r\n               \"deployOption\":\"small\"\r\n            },\r\n            \"clusterVIP\":{\r\n               \"clusterVips\":[\r\n                         {\r\n                            \"type\": \"vrli-cluster-1\",\r\n                            \"properties\": {\r\n                                \"hostName\": \"{{YourVIP.domain}}\",\r\n                                \"ip\": \"x.x.x.x\"\r\n                            }\r\n                        }\r\n               ]\r\n            },\r\n            \"nodes\":[\r\n               {\r\n                  \"type\":\"vrli-master\",\r\n                  \"properties\":{\r\n                     \"vmName\":\"{{YourVRLIMaster.domain}}\",\r\n                     \"hostName\":\"vrli-test.vmusketeers.local\",\r\n                     \"ip\":\"x.x.x.x\"}\r\n                \t},\r\n                {\r\n                  \"type\":\"vrli-worker\",\r\n                  \"properties\":{\r\n                     \"vmName\":\"{{YourVRLIWorker1}}\",\r\n                     \"hostName\":\"{{YourVRLIWorker.domain}}\",\r\n                     \"ip\":\"x.x.x.x\"}\r\n            \t\t},\r\n                {\r\n                  \"type\":\"vrli-worker\",\r\n                  \"properties\":{\r\n                     \"vmName\":\"{{YourVRLIWorker2}}\",\r\n                     \"hostName\":\"{{YourVRLIWorker.domain}}\",\r\n                     \"ip\":\"x.x.x.x\"}\r\n                  }\r\n            ]\r\n         }\r\n      ]\r\n   }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create",
+							"protocol": "https",
+							"host": [
+								"{{your-vrslcm-fqdn}}"
+							],
+							"path": [
+								"lcm",
+								"lcops",
+								"api",
+								"environments",
+								"create"
+							]
+						},
+						"description": "https://{{your-vrslcm-fqdn}}/lcm/lcops/api/environments/create\nAPI documentation: https://{{your-vrslcm-fqdn}}/api/swagger-ui.html\nDeploy a 3 node vRLI cluster. \nDatacentername = name of datacenter in vSphere UI\nPREREQUISTES:\n1. Datacentername = name of datacenter in vSphere UI\n2. Look for the resourcepool an foldername using powershell:\n    get-resourcepool -name resourcepool | get-view\n    get folder name -name folde | get-view\nMODIFY the BODY (JSON) \nvCenterPassWord: get the vmid of the Pssword for vCenter from the Locker (see General API Calls)\ndefaultPassWord: get the vmid of the default Password from the Locker (see General API Calls)\ncertificate: get the vmid of the certificate from the Locker (see General API Calls)"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
